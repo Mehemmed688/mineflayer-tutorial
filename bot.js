@@ -1,14 +1,14 @@
 const mineflayer = require("mineflayer");
 
 var settings = {
-    username: "TestMachine",
-    host: "localhost",
+    username: "AnimeKizi",
+    host: "drgtemasmp.sdlf.fun",
 };
 
 const bot = mineflayer.createBot(settings);
 
 bot.once("spawn", ()=>{
-    bot.chat("Hello everyone!");
+    bot.chat("Sa");
 });
 
 bot.on("move", ()=>{
@@ -25,4 +25,5 @@ bot.on("entityHurt", (entity)=>{
     if (entity != bot.entity) return;
     walking = !walking;
     bot.setControlState("forward", walking);
+
 });
